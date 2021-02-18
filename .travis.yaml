@@ -16,12 +16,12 @@ before_install:
  - gcloud container clusters get-credentials multi-cluster
  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
  - docker build -t swaroopsalvi/react-test -f ./client/Dockerfile.dev ./client
- 
- script:
-  - docker run -e CI=true swaroopsalvi/react-test npm test -- --coverage
- 
- deploy:
-  provider: script
-  script: bash ./deploy.sh
-  on:
-   branch: main
+
+script:
+ - docker run -e CI=true swaroopsalvi/react-test npm test -- --coverage
+
+deploy:
+ provider: script
+ script: bash ./deploy.sh
+ on:
+  branch: main
