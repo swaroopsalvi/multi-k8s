@@ -1,6 +1,6 @@
 docker build -t swaroopsalvi/multi-client:latest -t swaroopsalvi/multi-client:$SHA -f ./client/Dockerfile ./client
 docker build -t swaroopsalvi/multi-server:latest -t swaroopsalvi/multi-server:$SHA -f ./server/Dockerfile ./server
-docker build -t swaroopsalvi/multi-worker:latest -t swaroopsalvi/multi-worker:$SHA -f ./worker.Dockerfile ./worker
+docker build -t swaroopsalvi/multi-worker:latest -t swaroopsalvi/multi-worker:$SHA -f ./worker/Dockerfile ./worker
 
 docker push swaroopsalvi/multi-client:latest
 docker push swaroopsalvi/multi-server:latest
